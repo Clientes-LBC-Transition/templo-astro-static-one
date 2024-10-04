@@ -1,13 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import ContentLayout from "../layouts/ContentLayout.astro";
 import Footer from "../components/Footer.astro";
+import GalleryItem from "../components/GalleryItem.astro";
 ---
 
 <Layout title="Templo Transition">
 	<Header />
-	<div class="main">PAGINA DE LA GALERIA</div>
+	<div class="main">
+		<h1>GALERIA</h1>
+		<div class="galeria auto-grid">
+			<GalleryItem
+				nombre="Boiler Retro Night"
+				fecha="Martes, 31 Enero 2023"
+				numImagenes="82"
+				imagen="/images/sliders/slider_1.jpg"
+				url_evento="/galeria/evento1"
+			/>
+			<GalleryItem
+				nombre="Circus"
+				fecha="Lunes, 16 Enero 2023"
+				numImagenes="233"
+				imagen="/images/sliders/slider_2.jpg"
+				url_evento="/galeria/evento1"
+			/>
+			<GalleryItem
+				nombre="XII Aniversario"
+				fecha="Lunes, 12 Diciembre 2022"
+				numImagenes="118"
+				imagen="/images/sliders/slider_3.jpg"
+				url_evento="/galeria/evento1"
+			/>
+		</div>
+	</div>
 	<Footer />
 </Layout>
 
@@ -20,8 +45,15 @@ import Footer from "../components/Footer.astro";
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
-		display: grid;
-		grid-template-columns: 20% 1fr 20%;
 		border: 1px solid blue;
+	}
+
+	h1 {
+		color: red;
+	}
+
+	.auto-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 	}
 </style>

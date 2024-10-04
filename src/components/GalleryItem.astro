@@ -1,0 +1,64 @@
+---
+interface Props {
+	nombre: string;
+	fecha: string;
+	numImagenes: string;
+	imagen: string;
+	url_evento: string;
+}
+
+const { nombre, fecha, numImagenes, imagen, url_evento } = Astro.props;
+---
+
+<a href={url_evento}>
+	<div class="galeria-item">
+		<img class="galeria-item__imagen" src={imagen} />
+		<div class="galeria-item__info">
+			<p>{fecha}</p>
+			<p>{nombre}</p>
+			<p>Imagenes: {numImagenes}</p>
+		</div>
+	</div>
+</a>
+
+<style>
+	.galeria-item {
+		position: relative;
+		height: 400px;
+		max-width: 400px;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+
+	.galeria-item__imagen {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+	}
+
+	.galeria-item__info {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		padding: 1rem 1.5rem;
+		color: white;
+	}
+
+	.galeria-item__info > p:first-child {
+		margin-bottom: 0;
+	}
+
+	.galeria-item__info > p:nth-child(2) {
+		margin-top: 0;
+		font-size: 1.33rem;
+	}
+	.galeria-item__info > p:nth-child(3) {
+		margin: 0;
+		font-size: 1.33rem;
+	}
+</style>
