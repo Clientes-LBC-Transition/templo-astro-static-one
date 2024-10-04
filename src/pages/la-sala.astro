@@ -8,7 +8,76 @@ import Footer from "../components/Footer.astro";
 <Layout title="Templo Transition">
 	<Header />
 	<div class="main">
-		<ContentLayout> TEXTO DE PAGINA LASALA </ContentLayout>
+		<ContentLayout>
+			<h1>La Sala</h1>
+			<h2>¿Cómo llegar? GOOGLE MAP</h2>
+			<p>
+				El Templo Transition se encuentra en el Polígono Industrial “La
+				Dehesa Boyal” (Bollullos-La Palma del Cdo, Huelva) junto a
+				Carrefour, Zentrum y Cinema 7. Esta en un punto estratégico entre
+				Huelva y Sevilla, a 15 minutos por la Autovía A-49.
+			</p>
+			<h3>EN TRANSPORTE PUBLICO:</h3>
+			<img class="image-icon" src="/images/train.png" />
+			<h4>TREN desde HUELVA a LA PALMA DEL CONDADO:</h4>
+			<h5>Huelva (estación Renfe) - La Palma del Cdo (todos los sábados)</h5>
+			Último tren: 19:00 h (5 €)
+			<h5>La Palma del Cdo – Huelva (todos los domingos)</h5>
+			9:49 h / 13:35 h (4 €)
+
+			<h4>TREN desde SEVILLA a LA PALMA DEL CONDADO:</h4>
+			<h5>Sevilla - La Palma del Cdo (todos los sábados)</h5>
+			Último tren: 20:50 h (7 €)
+			<h5>La Palma del Cdo – Sevilla (todos los domingos)</h5>
+			7:25 h / 15:30 h (4 €)
+
+			<img class="image-icon" src="/images/taxi.png" />
+			<h4>TAXI desde LA PALMA DEL CONDADO</h4>
+			<ul>
+				<li>Antonio Romero 617 16 43 27</li>
+				<li>Cabrera 601 60 37 04</li>
+				<li>Carlos 644 933 201</li>
+			</ul>
+			* Con el Ticket del Taxi te invitamos a una consumición a tu llegada.
+
+			<h3>EN TRANSPORTE PRIVADO:</h3>
+			<img class="image-icon" src="/images/car.png" />
+			<p>
+				Desde SEVILLA, Autovia A48 / Salida 50, desde HUELVA, Autovia A48 /
+				Salida 48. Os recordamos, que según la ordenanza municipal está
+				prohibido introducir cualquier tipo de bebidas, objetos peligrosos o
+				equipos de sonido en la zona comercial.
+			</p>
+
+			<h2>Cenas y Alojamiento</h2> A pocos metros hay varios restaurantes donde
+			comer bien y alojarse. Este centro comerical con restaurantes, hoteles y
+			cafeterías ofrece una suculenta alternativa al ocio. Alojamiento en Hotel
+			El Lirio www.hostalellirio.com (959413817) y Hotel León www.leonhoteles.es
+			<h2>Información Técnica</h2>
+
+			<h3>Equipo DJ</h3>
+			<ul>
+				<li>1 DJM Pîoneer 900 Nexus</li>
+				<li>2 x CDJ Pioneer 2000 Nexus</li>
+				<li>2 x Technics 1200 SL</li>
+				<li>Allen & Heath Xone 96</li>
+			</ul>
+			<h3>Equipo de sonido PA 16.000w RMS</h3>
+			<ul>
+				<li>Mezcladora Digital Bose T4S</li>
+				<li>Procesador DBX2</li>
+				<li>3 x Etapas Dynacord L3600FD DSP</li>
+				<li>3 x The T.Amp 3600</li>
+				<li>Monitores Musicson</li>
+			</ul>
+			<h3>Medidas</h3>
+			<ul>
+				<li>Medidas del escenario: 8 m x 3 m</li>
+				<li>Medidas de la cabina DJ: 4 m x 2 m</li>
+				<li>Aforo máximo: 300 personas</li>
+			</ul>
+			<p>Email de contacto: reservas@templotransition.es</p>
+		</ContentLayout>
 	</div>
 	<Footer />
 </Layout>
@@ -25,5 +94,10 @@ import Footer from "../components/Footer.astro";
 		display: grid;
 		grid-template-columns: 20% 1fr 20%;
 		border: 1px solid blue;
+	}
+
+	.image-icon {
+		width: 100px;
+		display: block;
 	}
 </style>
