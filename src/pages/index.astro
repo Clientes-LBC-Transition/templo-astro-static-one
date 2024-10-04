@@ -1,92 +1,63 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
+import VideoHeader from "../components/VideoHeader.astro";
+import ImageSlider from "../components/ImageSlider.astro";
+import Footer from "../components/Footer.astro";
+import Evento from "../components/Evento.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Templo Transition">
 	<Header />
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br
+	<VideoHeader
+		videoSrc="/templo-videointro.mp4"
+		title="Welcome to Astro"
+		description="Explore the universe of Astro with a stunning video background."
+		showTitle="false"
+	/>
+	<div class="main">
+		<div class="sidebar sidebar--left">
+			<ImageSlider />
+			<ImageSlider />
+			<ImageSlider />
+		</div>
+		<div class="content">
+			<Evento
+				titulo="New Opening"
+				fecha="SAB 12 OCT"
+				imagen="/evento1.jpg"
 			/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+			<Evento
+				titulo="Boiler Freestyle"
+				fecha="SAB 26 OCT"
+				imagen="/evento2.jpg"
 			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+			<Evento
+				titulo="Especial Retro"
+				fecha="SAB 09 NOV"
+				imagen="/evento3.jpg"
 			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+		</div>
+		<div class="sidebar sidebar--right">
+			<ImageSlider />
+			<ImageSlider />
+			<ImageSlider />
+		</div>
+	</div>
+	<Footer />
 </Layout>
 
 <style>
-	main {
+	.main {
 		margin: auto;
 		padding: 1rem;
-		width: 800px;
+		width: 100%;
 		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(
-			rgba(var(--accent-dark), 66%),
-			rgba(var(--accent-dark), 33%)
-		);
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+		grid-template-columns: 20% 1fr 20%;
+		border: 1px solid blue;
 	}
 </style>
