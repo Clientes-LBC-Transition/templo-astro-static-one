@@ -1,20 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import VideoHeader from "../components/VideoHeader.astro";
 import ContentLayout from "../layouts/ContentLayout.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Evento from "../components/Evento.astro";
 ---
 
 <Layout title="Templo Transition">
 	<Header />
-	<VideoHeader
-		videoSrc="/templo-videointro.mp4"
-		title="Welcome to Astro"
-		description="Explore the universe of Astro with a stunning video background."
-		showTitle="false"
-	/>
+
 	<div class="main">
 		<ContentLayout>
 			<Evento
@@ -48,6 +42,5 @@ import Evento from "../components/Evento.astro";
 		line-height: 1.6;
 		display: grid;
 		grid-template-columns: 20% 1fr 20%;
-		border: 1px solid blue;
 	}
 </style>
