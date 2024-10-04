@@ -1,0 +1,64 @@
+---
+// VideoHeader.astro
+const { videoSrc, title, description, showTitle } = Astro.props;
+var extraClases = "";
+
+if (showTitle === "false") {
+	extraClases = "invisible";
+}
+---
+
+<div class="video-header">
+	<video class="background-video" autoplay muted loop>
+		<source src={videoSrc} type="video/mp4" />
+		Your browser does not support the video tag.
+	</video>
+	<div class="video-content invisible">
+		<h1>{title}</h1>
+		<p>{description}</p>
+	</div>
+</div>
+
+<style>
+	.video-header {
+		position: relative;
+		overflow: hidden;
+		height: 60vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		text-align: center;
+	}
+
+	.background-video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+	}
+
+	.video-content {
+		z-index: 1;
+		padding: 1rem;
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 8px;
+	}
+
+	.video-content h1 {
+		font-size: 3rem;
+		margin: 0;
+	}
+
+	.video-content p {
+		font-size: 1.25rem;
+		margin-top: 0.5rem;
+	}
+
+	.invisible {
+		display: none;
+	}
+</style>

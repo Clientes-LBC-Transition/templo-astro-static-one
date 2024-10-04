@@ -1,0 +1,33 @@
+---
+interface Props {
+	titulo: string;
+	fecha: string;
+	imagen: string;
+}
+
+const { titulo, fecha, imagen } = Astro.props;
+---
+
+<div class="evento">
+	<h2 class="evento__titulo">{fecha} ::: {titulo}</h2>
+	<img class="evento__imagen" src={imagen} alt="" />
+</div>
+
+<style>
+	.evento {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-bottom: 2rem;
+	}
+
+	.evento__titulo {
+		color: red;
+		text-transform: uppercase;
+	}
+
+	.evento__imagen {
+		width: 100%;
+	}
+</style>
