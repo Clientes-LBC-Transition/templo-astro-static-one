@@ -8,7 +8,53 @@ import Footer from "../components/Footer.astro";
 <Layout title="Templo Transition">
 	<Header />
 	<div class="main">
-		<ContentLayout> TEXTO DE PAGINA ZONA VIP </ContentLayout>
+		<ContentLayout>
+			<h1>Zona VIP</h1>
+			<h2>SUSCRIPCIÓN</h2>
+			<form
+				action=""
+				method="POST"
+				style="display: flex; flex-direction: column; justify-content: flex-start; width: min(30rem, 100%);"
+			>
+				<label for="nombre" style="margin-top: 1rem; margin-bottom: 1rem;">
+					Nombre Completo
+				</label>
+				<input
+					name="nombre_completo"
+					required=""
+					type="text"
+					id="nombre"
+					style="padding: 12px 20px;"
+				/>
+				<label
+					for="telefono"
+					style="margin-top: 1rem; margin-bottom: 1rem;"
+				>
+					Teléfono
+				</label>
+				<input
+					name="telefono"
+					required=""
+					type="text"
+					id="telefono"
+					style="padding: 12px 20px;"
+				/>
+				<button
+					type="submit"
+					style="margin-top: 2rem; margin-bottom: 4rem; padding-top: 12px; padding-bottom: 12px; justify-content: center;"
+					>Enviar</button
+				>
+			</form>
+			<h2>RESERVADOS</h2>
+			<p>
+				Usa el siguiente formulario para hacer tu petición de MESA VIP y nos
+				pondremos en contacto contigo lo antes posible. También puedes
+				llamar al telefono 654 168 295.
+			</p>
+			<a class="reservar__link">RESERVAR</a>
+
+			<img src="/images/sliders/slider_8.jpg" alt="" />
+		</ContentLayout>
 	</div>
 	<Footer />
 </Layout>
@@ -25,5 +71,25 @@ import Footer from "../components/Footer.astro";
 		display: grid;
 		grid-template-columns: 20% 1fr 20%;
 		border: 1px solid blue;
+	}
+
+	h1,
+	h2 {
+		color: red;
+	}
+
+	.reservar__link {
+		padding: 1rem 1.5rem;
+		color: white;
+		background-color: red;
+		font-size: 3rem;
+		font-weight: bold;
+		margin: 2rem auto;
+		display: block;
+		width: fit-content;
+	}
+
+	img {
+		max-width: 100%;
 	}
 </style>
