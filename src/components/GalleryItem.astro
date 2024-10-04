@@ -10,9 +10,12 @@ interface Props {
 const { nombre, fecha, numImagenes, imagen, url_evento } = Astro.props;
 ---
 
-<a href={url_evento}>
+<a href={"/templo-astro-static-one" + url_evento}>
 	<div class="galeria-item">
-		<img class="galeria-item__imagen" src={imagen} />
+		<img
+			class="galeria-item__imagen"
+			src={"/templo-astro-static-one" + imagen}
+		/>
 		<div class="galeria-item__info">
 			<p>{fecha}</p>
 			<p>{nombre}</p>

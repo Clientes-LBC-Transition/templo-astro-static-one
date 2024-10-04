@@ -32,7 +32,10 @@ function prevImage() {
 
 <div class="slider">
 	<button style="display: none;">&lt;</button>
-	<img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+	<img
+		src={"/templo-astro-static-one" + images[currentIndex]}
+		alt={`Image ${currentIndex + 1}`}
+	/>
 	<button style="display: none;">&gt;</button>
 </div>
 

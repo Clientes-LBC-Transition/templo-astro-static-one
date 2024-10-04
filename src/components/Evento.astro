@@ -10,7 +10,11 @@ const { titulo, fecha, imagen } = Astro.props;
 
 <div class="evento">
 	<h2 class="evento__titulo">{fecha} ::: {titulo}</h2>
-	<img class="evento__imagen" src={imagen} alt="" />
+	<img
+		class="evento__imagen"
+		src={"/templo-astro-static-one" + imagen}
+		alt=""
+	/>
 </div>
 
 <style>
