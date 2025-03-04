@@ -1,0 +1,6 @@
+version: 2
+updates:
+   - package-ecosystem: "npm" # O "yarn" o "pnpm" según tu gestor de paquetes
+     directory: "/" # Ruta donde se encuentra el archivo de dependencias
+     schedule:
+        interval: "weekly" # Intervalo de actualización (puede ser daily, weekly, monthly)
